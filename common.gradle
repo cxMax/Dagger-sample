@@ -1,0 +1,42 @@
+ext {
+    android = [
+            compileSdkVersion : 25,
+            buildToolsVersion : '25.0.2',
+            applicationId : "com.cxmax.dagger_sample" ,
+            minSdkVersion : 21,
+            targetSdkVersion : 25,
+            versionCode : 1,
+            versionName : "1.0"
+    ]
+
+    def dependVersion = [
+            support : "25.3.1",
+            constraint : "1.0.1",
+            dagger : "2.5",
+            butterknife : "8.4.0",
+            gson : "2.8.0" ,
+            junit : "4.12" ,
+            annotation : "1.0" ,
+            apt : "1.4"
+    ]
+
+    dependencies = [
+            // base
+            "appcompat-v7" : "com.android.support:appcompat-v7:${dependVersion.support}" ,
+            // ui
+            "constraint-layout" : "com.android.support.constraint:constraint-layout:${dependVersion.constraint}" ,
+            // junit
+            "junit" : "junit:junit:${dependVersion.junit}" ,
+            // dagger
+            "dagger" : "com.google.dagger:dagger-compiler:${dependVersion.dagger}" ,
+            "dagger-compiler" : "com.google.dagger:dagger-compiler:${dependVersion.dagger}" ,
+            "annotation" : "javax.annotation:jsr250-api:${dependVersion.annotation}" ,
+            // butterknife
+            "butterknife" : "com.jakewharton:butterknife:${dependVersion.butterknife}" ,
+            "butterknife-compiler" : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}" ,
+            // gson :
+            "gson" : "com.google.code.gson:gson:${dependVersion.gson}" ,
+            "android-apt" : "com.neenbedankt.gradle.plugins:android-apt:${dependVersion.apt}"
+
+    ]
+}
